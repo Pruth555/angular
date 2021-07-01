@@ -1,0 +1,52 @@
+
+<app-header></app-header>
+<div class="container">
+<form >
+    <label for=""><h5>User name</h5></label><br>
+    <input class="form-control col-6" type="text" placeholder="Name" name ="clientName" [value] = "clientName"><br>
+    <label for=""><h5>Contact Number</h5></label><br>
+    <input class="form-control col-6" type="text" placeholder="012345" name ="clientId" [value] = "clientId"><br>
+    <label for=""><h5>Choose City</h5></label>
+  
+    <select  class="form-control col-6" name="cities" id="select" [value] = "city"  >
+      <option value = "Bangalore" >Bangalore</option>
+      <option value = "Mumbai" >Mumbai</option>
+      <option value = "Pune" >Pune</option>
+    </select>
+    
+    <table>
+      <tr>
+        <td colspan="2">
+          <h5>Pick one:</h5>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="one way">one way</label></td>
+        <td><input   type="radio" id = "one  way" name="class" value="One way"  [value] = "onewaytrip"></td>
+      </tr>
+      <tr>  
+        <td><label for= "two way">two way</label></td>
+        <td><input   type="radio" id = "two way" name="class" value="Two way"  [value] = "!onewaytrip"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <h5>Departing</h5>
+        </td>
+        <td *ngIf="onewaytrip">
+          <h5>Returning</h5>
+        </td>
+      </tr>
+      <tr>
+          <td>
+            <input  class="form-control" type="date" name="depart" id="" [value] = "departDate">
+          </td>
+          <td>
+              <input  class="form-control" type="date" name="return" id="returnDate" [value] = "returnDate" *ngIf="onewaytrip">
+          </td>
+        </tr>
+    </table>
+    <button class="logInBtn btn btn-success" type="button" style="margin-top: 20px;"><a routerLink="/bookingconfirmed" routerLinkActive="active">Submit Booking </a></button>
+  </form>
+</div>
