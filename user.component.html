@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container" style="margin-right: 500px;">
+          <a class="navbar-brand" href="#" s>
+            <img src="../../assets/flight.png" alt="" width="50" height="24" >BookMyTicket
+          </a>
+        </div>
+      </nav>
+  <div class="row" style="margin-top: 50px;">
+      <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+          <h3 style="margin-top: 20px;">Login</h3>
+
+          <div class="row">
+              User Name : <input class="form-control" type="text" name="username"   [(ngModel)]="username" placeholder="Enter your name">
+          </div>
+          <div class="row">
+              Password : <input class="form-control" type="password" name="password"   [(ngModel)]="password" placeholder="Enter your password">
+          </div>
+          <div class="row">
+              <button  class="logInBtn btn btn-success" style="background-color:rgb(31, 76, 160);border-color: royalblue; margin-top: 20px;">
+                <a routerLink="/usermenu" routerLinkActive="active">Login</a>
+                </button>
+              <div style="margin-bottom: 50px;">
+                <a routerLink="#" routerLinkActive="active"> Sign up </a>
+                 <br>
+                <a routerLink="/admin" routerLinkActive="active"> Admin Login </a></div>
+          </div>
+      </div>
+
+  </div>
+</div>
