@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container" style="margin-right: 500px;">
+      <a class="navbar-brand" href="#" s>
+        <img src="../../assets/flight.png" alt="" width="50" height="24" >BookMyTicket
+      </a>
+    </div>
+  </nav>
+<div class="wrapper">
+    <div class="row" style="margin-top: 50px;">
+        <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+            <h3 style="margin-top: 20px;">Login</h3>
+  
+            <div class="row">
+                Admin Name : <input class="form-control" type="text" name="admin name" >
+            </div>
+            <div class="row">
+                Password : <input class="form-control" type="password" name="password" >
+            </div>
+            <div class="row">
+                <button  class="logInBtn btn btn-success" style="background-color:darkblue; border-color:cornflowerblue;color: wheat;">
+                  
+                    <a routerLink="/adminmenu" routerLinkActive="active">Login</a>
+                  
+                </button>
+  
+            </div> 
+  
+        </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>
